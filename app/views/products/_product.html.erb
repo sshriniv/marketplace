@@ -1,0 +1,11 @@
+  <div class = "col-md-3">
+    <div class = "thumbnail">
+      <%= link_to product_path(product) do %>
+        <%= image_tag "Product.jpg", class: "img-responsive" %>
+      <%end%>
+      <div class = "caption">
+        <p><%=link_to product.name, product_path(product)%></p>
+        <p>$<%=product.price.to_f/100%></p>
+      </div>
+    </div>
+  </div>

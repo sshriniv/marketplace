@@ -1,6 +1,8 @@
 <div class="jumbotron">
   <h1>Welcome to marketplace</h1>
   <p>Find cool stuff here</p>
-  <%= link_to "Products", "#", class: "btn btn-primary btn-lg" %>
-  <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+  <%= link_to "Products", products_path, class: "btn btn-primary btn-lg" %>
+  <% if !current_user %>
+    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+  <%end%>
 </div>
