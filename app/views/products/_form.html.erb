@@ -3,14 +3,14 @@
   <%= f.error_notification %>
 
 
-    <%= f.input :name %>
-    <%= f.input :descr1 %>
-    <%= f.input :descr2 %>
-    <%= f.input :price %>
-    <%= f.input :availability %>
+    <%= f.input :name, required: true, label: false, placeholder: "Name" %>
+    <%= f.input :descr1, required: true,label: false,label: false,label: false, placeholder: "Description 1" %>
+    <%= f.input :descr2, required: true,label: false,label: false, placeholder: "Description 2", input_html: {rows: 5}%>
+    <%= f.input :price, required: true,label: false, placeholder: "Price" %>
+    <%= f.input :availability, required: true %>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: "btn btn-primary" %>
   </div>
 <% end %>
 
