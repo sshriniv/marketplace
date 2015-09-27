@@ -9,6 +9,6 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-  	@products = Product.all
+  	@products = Product.where(:user => current_user)
   end
 end
